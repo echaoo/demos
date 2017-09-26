@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>color_mixer</title>
+    <style>
+        h1 {
+            text-align: center;
+            color: #999;
+            margin-top: 8%;
+        }
+
+        .color-mixer {
+            background: #FAF0E6;
+            text-align: center;
+        }
+
+        .input-color {
+            margin-top: 10%;
+        }
+
+        .input-color span, .input-color input {
+            display: inline-block;
+            width: 100px;
+            height: 30px;
+            background: #fff;
+            overflow: hidden;
+            vertical-align: bottom;
+            color: #999;
+        }
+
+        .input-color input {
+            border: none;
+            outline: none;
+            box-sizing: border-box;
+            padding: 1px 5px;
+            font-size: 15px;
+        }
+
+        #equal, #add {
+            background: #FAF0E6;
+            font-size: 14px;
+            width: 20px;
+            margin-left: 15px;
+        }
+
+        .result-color span {
+            display: inline-block;
+            width: 100px;
+            height: 30px;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+
+        #color1 {
+            background: #ffffff;
+        }
+
+        #color2 {
+            background: #000000;
+        }
+
+        #sumcolor {
+            background: #808080;
+        }
+    </style>
+</head>
+<body class="color-mixer">
+<h1>Color Mixer</h1>
+<p class="input-color">
+    <input id="colorstr1" value="#ffffff" onchange="changeColor()">
+    <span id="add"> + </span>
+    <input id="colorstr2" value="#000000" onchange="changeColor()" style="margin-left: 15px">
+    <span id="equal"> = </span>
+    <span id="sum" style="margin-left: 15px">#808080</span>
+</p>
+<p class="result-color">
+    <span id="color1"></span>
+    <span id="color2" style="margin-left: 50px"></span>
+    <span id="sumcolor" style="margin-left: 50px"></span>
+</p>
+
+<script>
+    function changeColor() {
+        var colorstr1 = document.getElementById('colorstr1').value
+        var color1 = document.getElementById('color1')
+        var colorstr2 = document.getElementById('colorstr2').value
+        var color2 = document.getElementById('color2')
+        var sum = document.getElementById('sum')
+        var sumcolor = document.getElementById('sumcolor')
+        var colorList = [colorstr1, colorstr2]
+        var color = toHexString(colorList) // 最终得到的颜色
+        color1.style.backgroundColor = colorstr1
+        color2.style.backgroundColor = colorstr2
+        sumcolor.style.backgroundColor = color
+        sum.innerHTML = color
+    }
+</script>
+<script src="index.js"></script>
+</body>
+</html>
