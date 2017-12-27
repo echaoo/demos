@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./js/unslider.min.js"></script>
+    <style>
+        html {
+            background-color: #28505d;
+        }
+        .planePath {
+            stroke: #80c3d8;
+            stroke-width: 1px;
+            stroke-dasharray: 5,5;
+            stroke-linecap: round;
+            fill: none;
+        }
+        svg {
+            width: 300px;
+            display: block;
+            position: absolute;
+        }
+
+        .arr {
+            width: 30px;
+            /*height: 10px;*/
+            /*background-color: red;*/
+            border-radius: 50%;
+            position: absolute;
+            offset-distance: 0%;
+
+            animation: red-ball 4s linear infinite;
+        }
+
+        .arr1 {
+            offset-path: path('M16.5,10.5s86-10,131,47c45.27,57.34,60,97,143,97');
+        }
+
+        .arr2 {
+            offset-path: path('M5.5 164.5 L290 166.5');
+        }
+
+        .arr3 {
+            offset-path: path('M16.5,321.83s86,10,131-47c45.27-57.34,60-97,143-97');
+        }
+
+        @keyframes red-ball {
+            from {
+                offset-distance: 0%;
+            }
+            to {
+                offset-distance: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<svg width="300px" height="375px" version="1.1">
+    <path fill="transparent" stroke="#888888" stroke-width="1" d="M16.5,10.5s86-10,131,47c45.27,57.34,60,97,143,97" class="planePath"></path>
+    <path fill="transparent" stroke="#888888" stroke-width="1" d="M5.5 164.5 L290 166.5" class="planePath"></path>
+    <path fill="transparent" stroke="#888888" stroke-width="1" d="M16.5,321.83s86,10,131-47c45.27-57.34,60-97,143-97" class="planePath"></path>
+</svg>
+
+<img src="./dian.png" class="arr arr1">
+<img src="./dian.png" class="arr arr2">
+<img src="./dian.png" class="arr arr3">
+<!--<div class="ball"></div>-->
+</body>
+</html>
