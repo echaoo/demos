@@ -30,9 +30,95 @@
 <script src="./d3.min.js" type="text/javascript"></script>
 <script src="./table_map.js" type="text/javascript"></script>
 <script>
-  d3.json('./moretest.json', function (dataJson) {
-    var plot = new tableMap('graph', dataJson)
-  })
+let data = {
+  "tableName": "table1",
+  "fields": [
+    {
+      "id": {
+        "tableName": "table2",
+        "fields": [
+          {
+            "id": {
+              "tableName": "table5",
+              "fields": [
+                {
+                  "id": {
+                    "fields": [],
+                    "tableName": ""
+                  }
+                },
+                {
+                  "name": {
+                    "fields": [],
+                    "tableName": ""
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "address": {
+              "tableName": "table3",
+              "fields": [
+                {
+                  "address": {
+                    "fields": [{
+                      "address": {
+                        "fields": [{
+                          "address": {
+                            "fields": [],
+                            "tableName": ""
+                          }
+                        }],
+                        "tableName": "table7"
+                      }
+                    }],
+                    "tableName": "table6"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": {
+        "tableName": "table4",
+        "fields": [
+          {
+            "name": {
+              "tableName": "table5",
+              "fields": [
+                {
+                  "name": {
+                    "fields": [],
+                    "tableName": ""
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "age": {
+        "fields": [{
+          "age": {
+            "fields": [],
+            "tableName": ""
+          }
+        }],
+        "tableName": "table8"
+      }
+    }
+  ]
+}
+var plot = new tableMap('graph', data)
+//  d3.json('./moretest.json', function (dataJson) {
+//    var plot = new tableMap('graph', dataJson)
+//  })
 </script>
 </body>
 </html>
