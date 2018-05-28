@@ -1,0 +1,85 @@
+{
+  "tableName": "table1",
+  "fields": [
+    {
+      "id": {
+        "tableName": "table2",
+        "fields": [
+          {
+            "id": {
+              "tableName": "table5",
+              "fields": [
+                {
+                  "id": {
+                    "fields": [],
+                    "tableName": ""
+                  }
+                },
+                {
+                  "name": {
+                    "fields": [],
+                    "tableName": ""
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "address": {
+              "tableName": "table3",
+              "fields": [
+                {
+                  "address": {
+                    "fields": [{
+                      "address": {
+                        "fields": [{
+                          "address": {
+                            "fields": [],
+                            "tableName": ""
+                          }
+                        }],
+                        "tableName": "table7"
+                      }
+                    }],
+                    "tableName": "table6"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": {
+        "tableName": "table4",
+        "fields": [
+          {
+            "name": {
+              "tableName": "table5",
+              "fields": [
+                {
+                  "name": {
+                    "fields": [],
+                    "tableName": ""
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "age": {
+        "fields": [{
+          "age": {
+            "fields": [],
+            "tableName": ""
+          }
+        }],
+        "tableName": "table8"
+      }
+    }
+  ]
+}
