@@ -137,7 +137,7 @@ function arrowMark (dom) {
 }
 
 function transform (obj, rs, level) {
-  if (obj.hasOwnProperty('tableName')) {
+  if (obj && obj.hasOwnProperty('tableName')) {
     if (obj.tableName === '') return
     const newItem = {tableName: obj.tableName, fields: []}
     obj.fields.forEach(item => {
